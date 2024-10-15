@@ -1,24 +1,20 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
-
 buildscript {
     repositories {
-        jcenter()
+        google()
+        jcenter() // JCenter 已经停止服务，但一些老版本依赖可能还在用。推荐使用 google() 和 mavenCentral()。
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.3.2'
-
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
+        classpath 'com.android.tools.build:gradle:7.0.2'  // 升级到较新版本
     }
 }
 
 allprojects {
     repositories {
-        jcenter()
+        google()
+        mavenCentral()  // jcenter 不再推荐使用，使用 mavenCentral 替代
     }
 }
 
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
-
