@@ -28,7 +28,7 @@ jobs:
       run: ./gradlew assembleDebug  # 你可以使用 assembleRelease 来构建发布版本
 
     - name: Upload APK
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3  # 使用v3版本
       with:
         name: app-debug-apk
         path: app/build/outputs/apk/debug/app-debug.apk  # 根据你使用的 build variant 调整路径
